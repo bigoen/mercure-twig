@@ -60,6 +60,7 @@ class MercureTwigFragmentRenderer extends RoutableFragmentRenderer
 
         $topics = implode(',', $options['topics']);
         $isAdd = $options['isAdd'] ?? 0;
+        $class = $options['class'] ?? '';
         $content = "
                   <bigoen-mercure-twig 
                       id='{$fragmentId}' 
@@ -67,6 +68,7 @@ class MercureTwigFragmentRenderer extends RoutableFragmentRenderer
                       topics='{$topics}' 
                       hub='{$this->hubUrl}'
                       is_add='{$isAdd}'
+                      class='{$class}'
                   >
                   {$response->getContent()}
                   </bigoen-merucre-twig>";
